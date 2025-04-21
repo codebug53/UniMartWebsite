@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - UniMart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login to UniMart</h1>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p id="message"></p>
+    <p class="signup-link">Not registered? <a href="#student-panel" id="scroll-to-signup">Sign up here</a></p>
+  </div>
+
+  <div id="student-panel" class="panel">
+    <p class="slide-text-left">Wanna join the UniMart cult? ?? <button onclick="location.href='../studentsignin/signin.html'">Student</button></p>
+  </div>
+<div id="vendor-panel" class="panel">
+  <p class="slide-text-right">
+    <button onclick="location.href='../vendorsignin/signin.html'">Vendor</button>
+    Only serious sellers allowed. Vendor vibes only.
+  </p>
+</div>
+
+
+  <script src="login.js"></script>
+</body>
+</html>

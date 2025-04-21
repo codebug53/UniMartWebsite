@@ -1,0 +1,136 @@
+html, body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background-color: beige;
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.login-container h1 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: black;
+}
+
+#message {
+  margin-top: 12px;
+  color: red;
+  font-size: 0.95rem;
+}
+
+.signup-link {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.signup-link a {
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Panels stack vertically and hidden until scroll */
+.panel {
+  width: 100%;
+  padding: 100px 40px;
+  box-sizing: border-box;
+}
+
+/* Slide text animations */
+
+.slide-text-right {
+  display: flex;
+  align-items: center; /* Vertically center the button and text */
+  justify-content: flex-end; /* Align the content to the right */
+  gap: 12px; /* Add space between the button and the text */
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-text-left {
+  display: flex;
+  align-items: center; /* Vertically center the button and text */
+  justify-content: flex-start; /* Align the content to the left */
+  gap: 12px; /* Add space between the button and the text */
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Make text and button visible when scrolled into view */
+.slide-text-left.visible,
+.slide-text-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Style both buttons */
+.slide-text-left button,
+.slide-text-right button {
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.slide-text-left button:hover,
+.slide-text-right button:hover {
+  background-color: black;
+}
+
+/* Panels specific styling */
+#student-panel,
+#vendor-panel {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
